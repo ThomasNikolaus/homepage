@@ -1,0 +1,130 @@
+.subpage {
+  width: 100%;
+  margin: 0;
+}
+
+.page-intro {
+  padding: 52px 0 48px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 13px;
+  color: var(--muted);
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.page-intro h1 {
+  max-width: 1050px;
+  margin: 0 0 24px;
+  font: 500 clamp(2.6rem, 5.5vw, 4.6rem)/1.02 Georgia, "Times New Roman", serif;
+  letter-spacing: -.03em;
+}
+
+.page-intro .lead {
+  max-width: 850px;
+  margin: 0;
+  color: #334054;
+  font-size: 1.08rem;
+}
+
+.page-intro a {
+  color: var(--navy);
+  text-underline-offset: 3px;
+}
+
+.people-section {
+  padding: 52px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.people-section h2 {
+  margin: 0 0 30px;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+}
+
+.people-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.people-group h3 {
+  margin: 0 0 8px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--navy);
+  color: var(--muted);
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.person {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.person h4 {
+  margin: 0 0 3px;
+  font: 600 1rem/1.35 Arial, Helvetica, sans-serif;
+}
+
+.person h4 a {
+  color: var(--ink);
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: color .15s ease, text-decoration-color .15s ease;
+}
+
+.person h4 a::after {
+  content: " ↗";
+  color: var(--muted);
+  font-size: .78em;
+  font-weight: 400;
+}
+
+.person h4 a:hover,
+.person h4 a:focus-visible {
+  color: var(--navy);
+  text-decoration-color: currentColor;
+}
+
+.person p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.person p .thesis-link {
+  color: var(--navy);
+  text-decoration-color: #aeb9ca;
+  text-underline-offset: 3px;
+}
+
+.person p .thesis-link:hover,
+.person p .thesis-link:focus-visible {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+}
+
+.alumni {
+  border-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .people-columns {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .page-intro {
+    padding: 38px 0;
+  }
+
+  .people-section {
+    padding: 42px 0;
+  }
+}

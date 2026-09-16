@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Categories and Symmetries, a conference in honour of Christoph Schweigert's 60th birthday, 23-27 August 2027 in Münster.">
+  <meta property="og:title" content="Categories and Symmetries">
+  <meta property="og:description" content="A conference in honour of Christoph Schweigert's 60th birthday, 23-27 August 2027 in Münster.">
+  <meta property="og:type" content="website">
+  <title>Categories and Symmetries · Münster 2027</title>
+  <link rel="canonical" href="https://thomasnikolaus.de/categories_and_symmetries.html">
+  <link rel="icon" href="favicon-mm.svg" type="image/svg+xml">
+  <style>
+    :root{
+      --ink:#172033;
+      --muted:#5e6878;
+      --line:#dfe4eb;
+      --soft:#f6f8fb;
+      --white:#ffffff;
+      --accent:#b00067;
+      --accent2:#25a8b7;
+      --navy:#163467;
+      --max:1120px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:var(--white);
+      font-family:Arial,Helvetica,sans-serif;
+      line-height:1.58;
+    }
+    a{color:inherit}
+    a:focus-visible{outline:3px solid rgba(37,168,183,.45);outline-offset:4px}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+
+    .hero{
+      display:grid;
+      grid-template-columns:minmax(0,1.18fr) minmax(340px,.82fr);
+      gap:56px;
+      align-items:center;
+      padding:56px 0 28px;
+    }
+    .kicker,.section-no{
+      margin:0;
+      color:var(--muted);
+      font-size:.76rem;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.025em}
+    h1{
+      max-width:780px;
+      margin:20px 0 24px;
+      font-size:clamp(3.2rem,7vw,5.9rem);
+      line-height:.96;
+      letter-spacing:-.04em;
+    }
+    h1 em{display:block;color:var(--ink);font-style:normal}
+    .title-initial{color:var(--accent)}
+    .subtitle{
+      max-width:730px;
+      margin:0;
+      color:#3f4a5d;
+      font-size:clamp(1.12rem,2vw,1.34rem);
+      line-height:1.52;
+    }
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      margin-top:27px;
+    }
+    .meta span{
+      padding:7px 12px;
+      color:#354052;
+      background:var(--soft);
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-size:.79rem;
+    }
+    .button{
+      display:inline-block;
+      padding:11px 16px;
+      color:#fff;
+      background:var(--navy);
+      border-radius:3px;
+      font-weight:650;
+      text-decoration:none;
+    }
+    .portrait-pair{
+      position:relative;
+      justify-self:end;
+      width:min(100%,390px);
+      aspect-ratio:.98;
+      margin:0;
+    }
+    .portrait-pair::before{
+      content:"";
+      position:absolute;
+      inset:4% 1% 13% 11%;
+      border:1px solid rgba(37,168,183,.35);
+      border-radius:50%;
+      background:radial-gradient(circle at center,rgba(246,248,251,.4) 0 31%,transparent 31.5%);
+    }
+    .portrait-card{
+      position:absolute;
+      margin:0;
+      overflow:hidden;
+      background:#d9dde3;
+      border:7px solid var(--white);
+      border-radius:3px;
+      box-shadow:0 14px 34px rgba(20,35,60,.16),0 0 0 1px var(--line);
+    }
+    .portrait-card img{display:block;width:100%;height:100%;object-fit:cover}
+    .portrait-current{top:0;right:0;width:83%;aspect-ratio:1.5;z-index:1}
+    .portrait-earlier{left:0;bottom:13%;width:61%;aspect-ratio:.955;z-index:2}
+    .portrait-year{
+      position:absolute;
+      right:8px;
+      bottom:8px;
+      padding:3px 7px;
+      color:#fff;
+      background:rgba(23,32,51,.78);
+      font-size:.64rem;
+      font-weight:700;
+      letter-spacing:.1em;
+    }
+    .portrait-pair>figcaption{
+      position:absolute;
+      right:0;
+      bottom:0;
+      max-width:77%;
+      color:var(--muted);
+      font-size:.63rem;
+      line-height:1.42;
+      text-align:right;
+    }
+    .portrait-pair>figcaption a{text-underline-offset:2px}
+
+    .host-strip{margin:0 calc(50% - 50vw) 62px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--soft)}
+    .host-inner{display:grid;grid-template-columns:1.05fr .95fr;align-items:stretch;padding:32px 0}
+    .sponsor-visual{position:relative;min-height:310px;margin:0;overflow:hidden;background:#d9dde3;border:1px solid var(--line);border-right:0;border-radius:4px 0 0 4px}
+    .sponsor-visual img{display:block;width:100%;height:100%;object-fit:cover}
+    .sponsor-visual figcaption{position:absolute;right:10px;bottom:8px;padding:3px 7px;color:#fff;background:rgba(23,32,51,.72);font-size:.63rem}
+    .sponsor-copy{display:flex;flex-direction:column;padding:31px 34px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:0 4px 4px 0}
+    .sponsor-copy>span{display:block;margin-bottom:8px;color:var(--muted);font-size:.68rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+    .sponsor-copy h2{margin:0 0 20px;font:500 clamp(1.55rem,2.5vw,2.15rem)/1.12 Georgia,"Times New Roman",serif;letter-spacing:-.02em}
+    .sponsor-logos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .sponsor-logo{min-height:88px;display:flex;align-items:center;justify-content:center;padding:11px;background:var(--soft);border:1px solid var(--line);border-radius:3px;text-decoration:none}
+    .sponsor-logo img{display:block;max-width:100%;max-height:66px;width:auto;height:auto;object-fit:contain}
+    .hosted-at{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:20px;padding-top:19px;border-top:1px solid var(--line);color:var(--muted);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .hosted-at img{display:block;max-width:145px;max-height:38px;width:auto;height:auto;object-fit:contain}
+
+    .page-nav{border-bottom:1px solid var(--line);background:#fff}
+    .page-nav .wrap{display:flex;gap:27px;overflow-x:auto;padding-top:15px;padding-bottom:15px;font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+    .page-nav a{color:#465164;text-decoration:none;white-space:nowrap}
+    .page-nav a:hover{color:var(--accent)}
+
+    main{padding:56px 0 78px}
+    section{margin:0 0 62px}
+    section h2{margin:10px 0 20px;font-size:clamp(2rem,3.6vw,3.15rem);line-height:1.08}
+    .about{display:grid;grid-template-columns:.44fr 1.16fr .70fr;gap:40px}
+    .about-copy p{margin:0 0 1em;color:#334054;font-size:1.08rem}
+    .topic-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+    .topic-list span{padding:6px 10px;color:#354052;background:var(--soft);border:1px solid var(--line);border-radius:999px;font-size:.76rem}
+    .facts{align-self:start;border-top:3px solid var(--navy);background:var(--soft)}
+    .fact{padding:16px 18px;border-bottom:1px solid var(--line)}
+    .fact strong{display:block;margin-bottom:3px;color:var(--muted);font-size:.68rem;letter-spacing:.11em;text-transform:uppercase}
+    .fact span{font-family:Georgia,"Times New Roman",serif;font-size:1rem;line-height:1.4}
+
+    .speakers{display:grid;grid-template-columns:.44fr 1.86fr;gap:40px}
+    .speaker-list{border-top:1px solid var(--line)}
+    .speaker-row{display:grid;grid-template-columns:42px minmax(0,1fr) minmax(190px,.72fr);gap:16px;align-items:center;padding:14px 2px;border-bottom:1px solid var(--line)}
+    .speaker-number{color:var(--accent);font-size:.66rem;font-weight:700;letter-spacing:.1em}
+    .speaker-name{font:500 1.23rem/1.3 Georgia,"Times New Roman",serif}
+    .speaker-affiliation{color:var(--muted);font-size:.82rem;line-height:1.35;text-align:right}
+    .speaker-row.pending .speaker-number{color:var(--accent2)}
+    .speaker-note{margin-left:7px;color:var(--accent2);font:700 .66rem/1 Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+
+    .updates{padding:54px max(20px,calc((100vw - var(--max))/2));margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .updates-head{display:grid;grid-template-columns:.44fr 1.86fr;gap:40px;max-width:var(--max);margin:0 auto}
+    .updates-head h2{margin-top:10px}
+    .programme-intro{max-width:760px;margin:0;color:var(--muted);font-size:1rem}
+    .timetable-wrap{max-width:var(--max);margin:30px auto 22px;overflow-x:auto;border:1px solid #cfd6e0;background:#fff}
+    .timetable{width:100%;min-width:1080px;border-collapse:collapse;table-layout:fixed}
+    .timetable th,.timetable td{padding:15px 14px;text-align:left;vertical-align:top;border-right:1px solid #d6dce4;border-bottom:1px solid #d6dce4}
+    .timetable tr>*:last-child{border-right:0}
+    .timetable tbody tr:last-child>*{border-bottom:0}
+    .timetable thead th{color:rgba(255,255,255,.82);background:#955174;font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    .timetable thead th:first-child,.timetable .period{width:9%}
+    .day-name{display:block;color:#fff;font:500 1rem/1.25 Georgia,"Times New Roman",serif;letter-spacing:0;text-transform:none}
+    .day-date{display:block;margin-top:3px;color:rgba(255,255,255,.64);font-size:.61rem;letter-spacing:.1em}
+    .timetable .period{color:var(--navy);background:#edf1f5;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .schedule-item{color:#354052;font-size:.8rem;line-height:1.4}
+    .schedule-item+.schedule-item{margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+    .schedule-item strong{display:block;margin-bottom:1px;color:var(--ink);font-weight:650}
+    .schedule-time{display:block;margin-bottom:3px;color:var(--accent);font-size:.61rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .speaker-placeholder{display:block;color:var(--muted);font-size:.72rem}
+    .schedule-item.break{color:var(--muted)}
+    .tbc{display:inline-block;margin-top:5px;padding:2px 6px;color:var(--navy);background:#eef2f8;border-radius:999px;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .schedule-lane{
+      display:grid;
+      grid-template-columns:minmax(0,1fr);
+      background:#fff;
+    }
+    .morning-lane{grid-template-rows:repeat(7,36px)}
+    .afternoon-lane{grid-template-rows:repeat(6,36px)}
+    .timetable td.schedule-cell{padding:0}
+    .schedule-lane .schedule-item{
+      grid-column:1;
+      grid-row:var(--start)/span var(--span);
+      min-width:0;
+      margin:0;
+      padding:5px 8px;
+      overflow:hidden;
+      background:#fff;
+      border:0;
+      border-bottom:1px solid var(--line);
+      font-size:.76rem;
+      line-height:1.25;
+    }
+    .schedule-lane .schedule-item+.schedule-item{margin-top:0;padding-top:5px;border-top:0}
+    .schedule-lane .schedule-item.break{background:#eef1f4}
+.schedule-lane .schedule-item.special{background:#eef1f4}
+    .status-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:var(--max);margin:0 auto}
+    .status-card{min-height:190px;padding:22px 22px 24px;background:#fff;border:1px solid var(--line);border-radius:4px}
+    .status-card span{display:block;margin-bottom:18px;color:var(--accent);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    .status-card h3{margin:0 0 10px;font:500 1.25rem/1.3 Georgia,"Times New Roman",serif}
+    .status-card p{margin:0;color:var(--muted);font-size:.93rem}
+
+    .organisation{display:grid;grid-template-columns:.44fr 1.86fr;gap:40px}
+    .organiser-row{
+      text-decoration:none;
+      transition:background .18s ease;
+    }
+    .organiser-row:hover{background:var(--soft)}
+    .organiser-arrow{display:inline-block;margin-left:.32em;color:var(--navy);font:.75em/1 Arial,Helvetica,sans-serif;transition:transform .18s ease}
+    .organiser-row:hover .organiser-arrow{transform:translate(2px,-2px)}
+
+    .notice{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;padding:24px;border-top:3px solid var(--navy);border-bottom:1px solid var(--line);background:var(--soft)}
+    .notice h2{margin:0 0 8px;font-size:2rem}
+    .notice p{margin:0;color:var(--muted)}
+
+    footer{border-top:1px solid var(--line)}
+    .footer-inner{display:flex;justify-content:space-between;gap:18px;padding:28px 0;color:var(--muted);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase}
+    .footer-inner a{color:var(--navy)}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;gap:42px}.portrait-pair{justify-self:start;width:min(100%,390px)}
+      .host-inner{grid-template-columns:1fr}.sponsor-visual{min-height:240px;border-right:1px solid var(--line);border-bottom:0;border-radius:4px 4px 0 0}.sponsor-copy{border-radius:0 0 4px 4px}
+      .about{grid-template-columns:1fr 1.5fr}.about>.section-no{grid-column:1/-1}.facts{grid-column:2}
+      .speakers,.updates-head,.organisation{grid-template-columns:1fr}.status-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media(max-width:680px){
+      .hero{padding:50px 0}.portrait-pair{width:100%}.sponsor-copy{padding:26px 24px}.sponsor-logos{grid-template-columns:1fr}.hosted-at{align-items:flex-start;flex-direction:column}.about{grid-template-columns:1fr}.facts{grid-column:auto}.status-grid{grid-template-columns:1fr}
+      .speaker-row{grid-template-columns:34px minmax(0,1fr);gap:8px 12px}.speaker-affiliation{grid-column:2;text-align:left}
+      .notice{grid-template-columns:1fr}.footer-inner{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap hero">
+    <div>
+      <p class="kicker">Conference in Münster · 2027</p>
+      <h1><span class="title-initial">C</span>ategories and <em><span class="title-initial">S</span>ymmetries</em></h1>
+      <p class="subtitle">A conference in honour of <a href="https://www.math.uni-hamburg.de/home/schweigert/" target="_blank" rel="noopener">Christoph Schweigert</a>&rsquo;s 60th birthday.</p>
+      <div class="meta" aria-label="Conference details">
+        <span>23–27 August 2027</span>
+        <span>Münster, Germany</span>
+        <span>University of Münster</span>
+      </div>
+    </div>
+    <figure class="portrait-pair" aria-label="Christoph Schweigert at Oberwolfach in 2005 and 2026">
+      <div class="portrait-card portrait-current">
+        <img src="Files/christoph-schweigert-2026.jpg" alt="Christoph Schweigert at Oberwolfach in 2026" width="400" height="266">
+        <span class="portrait-year">2026</span>
+      </div>
+      <div class="portrait-card portrait-earlier">
+        <img src="Files/christoph-schweigert-2005.jpg" alt="Christoph Schweigert at Oberwolfach in 2005" width="382" height="400">
+        <span class="portrait-year">2005</span>
+      </div>
+      <figcaption>
+        Photos: <a href="https://opc.mfo.de/detail?photo_id=7388" target="_blank" rel="noopener">Renate Schmid</a> and <a href="https://commons.wikimedia.org/wiki/File:Christoph_Schweigert_Oberwolfach_2026.jpg" target="_blank" rel="noopener">Marlene Ruf</a>, Archives of the MFO · <a href="https://creativecommons.org/licenses/by-sa/2.0/de/deed.en" target="_blank" rel="noopener">CC BY-SA 2.0 DE</a>
+      </figcaption>
+    </figure>
+  </header>
+
+  <nav class="page-nav" aria-label="Conference sections">
+    <div class="wrap">
+      <a href="#about">About</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#organisation">Organisers</a>
+      <a href="#programme">Programme</a>
+      <a href="#registration">Registration</a>
+      <a href="#venue">Venue &amp; travel</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="about" id="about">
+      <p class="section-no">01 / About</p>
+      <div class="about-copy">
+        <p>The conference focuses on interactions between quantum field theory, category theory, and representation theory. It brings together leading experts and young researchers from these and related fields to foster mathematical exchange and new collaborations.</p>
+        <p>Recent years have seen major developments in tensor and fusion categories, higher categorical structures in quantum field theory, vertex operator algebras, and representation theory. The conference will provide a forum to discuss these advances and explore new research directions across mathematics and mathematical physics.</p>
+        <p>The meeting celebrates Christoph Schweigert&rsquo;s 60th birthday. His work has been central in shaping these developments and in building bridges between algebraic, geometric, and physical perspectives.</p>
+        <div class="topic-list" aria-label="Conference topics">
+          <span>Quantum field theory</span>
+          <span>Category theory</span>
+          <span>Representation theory</span>
+          <span>Tensor &amp; fusion categories</span>
+          <span>Vertex operator algebras</span>
+          <span>Higher categories</span>
+        </div>
+      </div>
+      <aside class="facts" aria-label="Conference at a glance">
+        <div class="fact"><strong>Date</strong><span>23–27 August 2027</span></div>
+        <div class="fact"><strong>Place</strong><span>Münster, Germany</span></div>
+        <div class="fact"><strong>Venue</strong><span>University of Münster<br>Details to be announced</span></div>
+      </aside>
+    </section>
+
+    <section class="speakers" id="speakers">
+      <p class="section-no">02 / Speakers</p>
+      <div>
+        <h2>Speakers</h2>
+        <div class="speaker-list" role="list">
+          <div class="speaker-row" role="listitem"><span class="speaker-number">01</span><strong class="speaker-name">Giovanni Felder</strong><span class="speaker-affiliation">ETH Zürich</span></div>
+          <div class="speaker-row" role="listitem"><span class="speaker-number">02</span><strong class="speaker-name">Jürg Fröhlich</strong><span class="speaker-affiliation">ETH Zürich</span></div>
+          <div class="speaker-row" role="listitem"><span class="speaker-number">03</span><strong class="speaker-name">Jürgen Fuchs</strong><span class="speaker-affiliation">Karlstad University</span></div>
+          <div class="speaker-row" role="listitem"><span class="speaker-number">04</span><strong class="speaker-name">Catherine Meusburger</strong><span class="speaker-affiliation">FAU Erlangen–Nürnberg</span></div>
+          <div class="speaker-row" role="listitem"><span class="speaker-number">05</span><strong class="speaker-name">Victor Ostrik</strong><span class="speaker-affiliation">University of Oregon</span></div>
+          <div class="speaker-row pending" role="listitem"><span class="speaker-number">06</span><strong class="speaker-name">Nicolai Reshetikhin <span class="speaker-note">tbc</span></strong><span class="speaker-affiliation">Tsinghua University · UC Berkeley</span></div>
+          <div class="speaker-row" role="listitem"><span class="speaker-number">07</span><strong class="speaker-name">Bert Schellekens</strong><span class="speaker-affiliation">Nikhef</span></div>
+          <div class="speaker-row" role="listitem"><span class="speaker-number">08</span><strong class="speaker-name">Frank Verstraete</strong><span class="speaker-affiliation">University of Cambridge · Ghent University</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="organisation" id="organisation">
+      <p class="section-no">03 / Organisation</p>
+      <div>
+        <h2>Organisers</h2>
+        <div class="speaker-list" role="list">
+          <a class="speaker-row organiser-row" role="listitem" href="index.html">
+            <span class="speaker-number">01</span>
+            <strong class="speaker-name">Thomas Nikolaus <span class="organiser-arrow" aria-hidden="true">↗</span></strong>
+            <span class="speaker-affiliation">University of Münster</span>
+          </a>
+          <a class="speaker-row organiser-row" role="listitem" href="https://www.math.uni-hamburg.de/home/runkel/" target="_blank" rel="noopener">
+            <span class="speaker-number">02</span>
+            <strong class="speaker-name">Ingo Runkel <span class="organiser-arrow" aria-hidden="true">↗</span></strong>
+            <span class="speaker-affiliation">University of Hamburg</span>
+          </a>
+          <a class="speaker-row organiser-row" role="listitem" href="http://www.konradwaldorf.de/math/www/" target="_blank" rel="noopener">
+            <span class="speaker-number">03</span>
+            <strong class="speaker-name">Konrad Waldorf <span class="organiser-arrow" aria-hidden="true">↗</span></strong>
+            <span class="speaker-affiliation">University of Greifswald</span>
+          </a>
+          <a class="speaker-row organiser-row" role="listitem" href="https://lukas-woike.github.io/Lukas-Woike.io/" target="_blank" rel="noopener">
+            <span class="speaker-number">04</span>
+            <strong class="speaker-name">Lukas Woike <span class="organiser-arrow" aria-hidden="true">↗</span></strong>
+            <span class="speaker-affiliation">Université Bourgogne Europe</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="updates" id="programme">
+      <div class="updates-head">
+        <p class="section-no">04 / Programme &amp; participation</p>
+        <div>
+          <h2>Tentative timetable</h2>
+          <p class="programme-intro">Each scientific talk is scheduled for one hour. The times below are preliminary; speaker names and final session details will be added later.</p>
+        </div>
+      </div>
+      <div class="timetable-wrap">
+        <table class="timetable">
+          <thead>
+            <tr>
+              <th scope="col">Period</th>
+              <th scope="col"><span class="day-name">Monday</span><span class="day-date">23 August</span></th>
+              <th scope="col"><span class="day-name">Tuesday</span><span class="day-date">24 August</span></th>
+              <th scope="col"><span class="day-name">Wednesday</span><span class="day-date">25 August</span></th>
+              <th scope="col"><span class="day-name">Thursday</span><span class="day-date">26 August</span></th>
+              <th scope="col"><span class="day-name">Friday</span><span class="day-date">27 August</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="period" scope="row">Morning</th>
+              <td class="schedule-cell">
+                <div class="schedule-lane morning-lane">
+                  <div class="schedule-item special" style="--start:1;--span:2"><span class="schedule-time">09:00–10:00</span><strong>Registration &amp; coffee</strong></div>
+                  <div class="schedule-item" style="--start:3;--span:2"><span class="schedule-time">10:00–11:00</span><strong>Talk 1</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                  <div class="schedule-item break" style="--start:5;--span:1"><span class="schedule-time">11:00–11:30</span>Coffee break</div>
+                  <div class="schedule-item" style="--start:6;--span:2"><span class="schedule-time">11:30–12:30</span><strong>Talk 2</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                </div>
+              </td>
+              <td class="schedule-cell">
+                <div class="schedule-lane morning-lane">
+                  <div class="schedule-item" style="--start:3;--span:2"><span class="schedule-time">10:00–11:00</span><strong>Talk 5</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                  <div class="schedule-item break" style="--start:5;--span:1"><span class="schedule-time">11:00–11:30</span>Coffee break</div>
+                  <div class="schedule-item" style="--start:6;--span:2"><span class="schedule-time">11:30–12:30</span><strong>Talk 6</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                </div>
+              </td>
+              <td class="schedule-cell">
+                <div class="schedule-lane morning-lane">
+                  <div class="schedule-item" style="--start:1;--span:2"><span class="schedule-time">09:00–10:00</span><strong>Talk 9</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                  <div class="schedule-item break" style="--start:3;--span:1"><span class="schedule-time">10:00–10:30</span>Coffee break</div>
+                  <div class="schedule-item" style="--start:4;--span:2"><span class="schedule-time">10:30–11:30</span><strong>Talk 10</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                  <div class="schedule-item" style="--start:6;--span:2"><span class="schedule-time">11:30–12:30</span><strong>Talk 11</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                </div>
+              </td>
+              <td class="schedule-cell">
+                <div class="schedule-lane morning-lane">
+                  <div class="schedule-item" style="--start:3;--span:2"><span class="schedule-time">10:00–11:00</span><strong>Talk 12</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                  <div class="schedule-item break" style="--start:5;--span:1"><span class="schedule-time">11:00–11:30</span>Coffee break</div>
+                  <div class="schedule-item" style="--start:6;--span:2"><span class="schedule-time">11:30–12:30</span><strong>Talk 13</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                </div>
+              </td>
+              <td class="schedule-cell">
+                <div class="schedule-lane morning-lane">
+                  <div class="schedule-item" style="--start:1;--span:2"><span class="schedule-time">09:00–10:00</span><strong>Talk 16</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                  <div class="schedule-item break" style="--start:3;--span:1"><span class="schedule-time">10:00–10:30</span>Coffee break</div>
+                  <div class="schedule-item" style="--start:4;--span:2"><span class="schedule-time">10:30–11:30</span><strong>Talk 17</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                  <div class="schedule-item" style="--start:6;--span:2"><span class="schedule-time">11:30–12:30</span><strong>Talk 18</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th class="period" scope="row">Lunch</th>
+              <td><div class="schedule-item"><span class="schedule-time">12:30–14:00</span><strong>Lunch break</strong></div></td>
+              <td><div class="schedule-item"><span class="schedule-time">12:30–14:00</span><strong>Lunch break</strong></div></td>
+              <td><div class="schedule-item"><span class="schedule-time">From 12:30</span><strong>Lunch &amp; free afternoon</strong></div></td>
+              <td><div class="schedule-item"><span class="schedule-time">12:30–14:30</span><strong>Lunch break</strong></div></td>
+              <td><div class="schedule-item"><span class="schedule-time">12:30</span><strong>Conference closes</strong></div></td>
+            </tr>
+            <tr>
+              <th class="period" scope="row">Afternoon</th>
+              <td class="schedule-cell">
+                <div class="schedule-lane afternoon-lane">
+                  <div class="schedule-item" style="--start:1;--span:2"><span class="schedule-time">14:00–15:00</span><strong>Talk 3</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                  <div class="schedule-item break" style="--start:3;--span:1"><span class="schedule-time">15:00–15:30</span>Coffee break</div>
+                  <div class="schedule-item" style="--start:4;--span:2"><span class="schedule-time">15:30–16:30</span><strong>Talk 4</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                </div>
+              </td>
+              <td class="schedule-cell">
+                <div class="schedule-lane afternoon-lane">
+                  <div class="schedule-item" style="--start:1;--span:2"><span class="schedule-time">14:00–15:00</span><strong>Talk 7</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                  <div class="schedule-item break" style="--start:3;--span:1"><span class="schedule-time">15:00–15:30</span>Coffee break</div>
+                  <div class="schedule-item" style="--start:4;--span:2"><span class="schedule-time">15:30–16:30</span><strong>Talk 8</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                </div>
+              </td>
+              <td class="schedule-cell"><div class="schedule-lane afternoon-lane"><div class="schedule-item special" style="--start:1;--span:6"><strong>Free afternoon</strong>(Hike or something)</div></div></td>
+              <td class="schedule-cell">
+                <div class="schedule-lane afternoon-lane">
+                  <div class="schedule-item" style="--start:1;--span:2"><span class="schedule-time">14:00–15:00</span><strong>Talk 14</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                  <div class="schedule-item break" style="--start:3;--span:1"><span class="schedule-time">15:00–15:30</span>Coffee break</div>
+                  <div class="schedule-item" style="--start:4;--span:2"><span class="schedule-time">15:30–16:30</span><strong>Talk 15</strong><span class="speaker-placeholder">Speaker TBA</span></div>
+                </div>
+              </td>
+              <td class="schedule-cell"><div class="schedule-lane afternoon-lane"><div class="schedule-item special" style="--start:1;--span:6"><strong>Departure</strong></div></div></td>
+            </tr>
+            <tr>
+              <th class="period" scope="row">Evening</th>
+              <td><div class="schedule-item"><span class="schedule-time">17:00</span><strong>Welcome reception</strong>Possible poster flash <span class="tbc">TBC</span></div></td>
+              <td><div class="schedule-item"><span class="schedule-time">17:00</span><strong>Gong show or poster session</strong><span class="tbc">Format TBC</span></div></td>
+              <td><div class="schedule-item"><strong>Free evening</strong></div></td>
+              <td><div class="schedule-item"><span class="schedule-time">Around 19:00</span><strong>Conference dinner</strong></div></td>
+              <td><div class="schedule-item">&mdash;</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="status-grid">
+        <article class="status-card" id="registration">
+          <span>Participation</span>
+          <h3>Registration</h3>
+          <p>Registration, possible participant support, and childcare information will be posted here once confirmed.</p>
+        </article>
+        <article class="status-card" id="venue">
+          <span>Practical information</span>
+          <h3>Venue and travel</h3>
+          <p>The conference will take place at the University of Münster. Rooms, directions, accommodation, and travel details will follow.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="host-strip" aria-label="Conference sponsors">
+      <div class="wrap host-inner">
+        <figure class="sponsor-visual">
+          <img src="Files/mm-schloss-conference.jpg" alt="Mathematics Münster installation in front of Münster Castle" width="761" height="353" loading="lazy">
+          <figcaption>© Mathematics Münster / vl</figcaption>
+        </figure>
+        <div class="sponsor-copy">
+          <span>Supported by</span>
+          <h2>Mathematics Münster and CRC 1442</h2>
+          <div class="sponsor-logos">
+            <a class="sponsor-logo" href="https://www.uni-muenster.de/MathematicsMuenster/" target="_blank" rel="noopener" aria-label="Mathematics Münster">
+              <img src="Files/MM_Logo_2018_rgb_small.jpg" alt="Mathematics Münster">
+            </a>
+            <a class="sponsor-logo" href="https://www.uni-muenster.de/MathematicsMuenster/CRC-Geometry/" target="_blank" rel="noopener" aria-label="CRC 1442 Geometry: Deformations and Rigidity">
+              <img src="Files/CRC1442.png" alt="CRC 1442 Geometry: Deformations and Rigidity">
+            </a>
+          </div>
+          <a class="hosted-at" href="https://www.uni-muenster.de/en/" target="_blank" rel="noopener">
+            <span>Hosted at the University of Münster</span>
+            <img src="Files/university-muenster-logo.png" alt="University of Münster">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <section class="notice">
+      <div>
+        <h2>Questions?</h2>
+        <p>For preliminary enquiries about the conference, please contact <a href="#organisation">one of the organisers</a>.</p>
+      </div>
+      <a class="button" href="#organisation">Organisers</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>Categories and Symmetries · Supported by Mathematics Münster and CRC 1442</span>
+      <span><a href="index.html">Thomas Nikolaus</a> · <a href="https://www.uni-muenster.de/FB10/impressum.html">Impressum</a> · <a href="https://www.uni-muenster.de/de/datenschutzerklaerung.html">Datenschutz</a></span>
+    </div>
+  </footer>
+</body>
+</html>
