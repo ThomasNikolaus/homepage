@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algebraic Geometry — Thomas Nikolaus</title>
+  <link rel="canonical" href="https://thomasnikolaus.de/algebraic-geometry.html">
+  <link rel="icon" href="favicon-mm.png?v=20260823-2" type="image/png" sizes="128x128">
+  <link rel="shortcut icon" href="favicon-mm.png?v=20260823-2" type="image/png">
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="Course.css?v=20260917-1">
+  <style>@media(max-width:700px){.site-header{flex-wrap:wrap}.site-header nav{width:100%;flex-wrap:wrap;overflow:visible;justify-content:flex-start;gap:8px 15px;padding-bottom:0}}</style>
+  <meta name="description" content="Algebraic Geometry, winter term 2026/27: course description, lecture notes, topics, and literature.">
+  <meta name="robots" content="all">
+  <meta name="author" content="Thomas Nikolaus">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Algebraic Geometry",
+    "description": "A course on schemes, morphisms of schemes, quasi-coherent and locally free sheaves, and the Grassmannian.",
+    "url": "https://thomasnikolaus.de/algebraic-geometry.html",
+    "provider": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Münster",
+      "url": "https://www.uni-muenster.de/"
+    },
+    "instructor": {
+      "@type": "Person",
+      "@id": "https://thomasnikolaus.de/#person",
+      "name": "Thomas Nikolaus"
+    },
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "onsite",
+      "courseWorkload": "Lecture course",
+      "startDate": "2026-10",
+      "endDate": "2027-02",
+      "location": {
+        "@type": "Place",
+        "name": "University of Münster"
+      }
+    }
+  }
+  </script>
+</head>
+
+<body>
+<header class="site-header">
+  <a class="wordmark" href="index.html" aria-label="Home">TN</a>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a><a href="group.html">Group</a><a href="papers.html">Publications</a><a class="active" href="teaching.html">Teaching</a><a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<header class="course-hero">
+  <p class="course-kicker">Lecture course · Winter term 2026/27</p>
+  <h1>Algebraic Geometry</h1>
+  <p class="course-lead">This course develops the language of schemes and uses it to study geometric spaces defined by polynomial equations. The guiding principle is to move freely between algebraic structure and geometric intuition.</p>
+  <dl class="course-meta">
+    <div>
+      <dt>Format</dt>
+      <dd>Lecture course</dd>
+    </div>
+    <div>
+      <dt>Term</dt>
+      <dd>Winter 2026/27</dd>
+    </div>
+    <div>
+      <dt>Lecturer</dt>
+      <dd>Thomas Nikolaus</dd>
+    </div>
+  </dl>
+</header>
+
+<main class="course-main">
+  <section class="course-section" aria-labelledby="overview-title">
+    <div class="section-heading">
+      <p class="section-label">Course overview</p>
+      <h2 id="overview-title">From rings to schemes</h2>
+    </div>
+    <div class="section-content">
+      <p>This course continues the lecture <em>Commutative Algebra</em>. After a short introduction to category theory, we will develop the theory of schemes, including central properties of schemes and morphisms of schemes, as well as quasi-coherent and locally free sheaves.</p>
+      <p>The course will culminate in the construction of the Grassmannian, which parametrizes the <i>d</i>-dimensional linear subspaces of an <i>n</i>-dimensional vector space.</p>
+      <ol class="topic-route" aria-label="Course topics">
+        <li><span>01</span>Category theory</li>
+        <li><span>02</span>Affine schemes and schemes</li>
+        <li><span>03</span>Morphisms and their properties</li>
+        <li><span>04</span>Quasi-coherent and locally free sheaves</li>
+        <li><span>05</span>The Grassmannian</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="course-section" aria-labelledby="idea-title">
+    <div class="section-heading">
+      <p class="section-label">Motivation</p>
+      <h2 id="idea-title">What is the idea of algebraic geometry?</h2>
+    </div>
+    <div class="section-content">
+      <p>Algebraic geometry begins with systems of polynomial equations, but its aim is not merely to list their solutions. It studies the geometry carried by those solutions and uses that geometry to answer algebraic questions—and conversely.</p>
+      <div class="idea-grid">
+        <article class="idea-card">
+          <h3>Linear algebra</h3>
+          <p>Systems of linear equations have solution sets that form vector subspaces.</p>
+        </article>
+        <article class="idea-card">
+          <h3>Algebra</h3>
+          <p>Polynomial equations encode extensions, arithmetic information, and relations in rings.</p>
+        </article>
+        <article class="idea-card">
+          <h3>Algebraic geometry</h3>
+          <p>Several polynomial equations define spaces whose algebraic and geometric structures illuminate one another.</p>
+        </article>
+      </div>
+      <div class="equation-callout">
+        <strong>Think of <i>x</i><sup>2</sup> + <i>y</i><sup>2</sup> = 1 as a circle—not merely as a set of pairs.</strong>
+        <p>As in differential geometry, spaces arise locally as zero loci of functions. Here the functions are polynomial, and we deliberately allow singularities. The theory of schemes records the additional algebraic information needed to make this viewpoint work over general fields and rings.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="course-section" id="materials" aria-labelledby="materials-title">
+    <div class="section-heading">
+      <p class="section-label">Course materials</p>
+      <h2 id="materials-title">Notes and updates</h2>
+    </div>
+    <div class="section-content">
+      <div class="materials-grid">
+        <a class="material-card" href="Files/Algebraic%20Geometry.pdf">
+          <span class="material-label">Previous lecture notes · PDF</span>
+          <h3>Algebraic Geometry I–III</h3>
+          <p>Notes from the earlier three-course sequence taught in 2021–23. They are provided as background and reference; the organization of the current course may differ.</p>
+          <span class="material-link">Open lecture notes →</span>
+        </a>
+        <article class="material-card">
+          <span class="material-label">Winter term 2026/27</span>
+          <h3>Current course materials</h3>
+          <p>Problem sheets and further material for the current course will be added to this page during the semester.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="course-section" aria-labelledby="literature-title">
+    <div class="section-heading">
+      <p class="section-label">Reading</p>
+      <h2 id="literature-title">Literature</h2>
+    </div>
+    <div class="section-content reading-groups">
+      <div class="reading-group">
+        <h3>Textbooks in algebraic geometry</h3>
+        <ul class="reading-list">
+          <li><cite>S. Bosch, <em>Algebraic Geometry and Commutative Algebra</em></cite><span>Springer, 2013. A self-contained treatment of commutative algebra and the theory of schemes.</span></li>
+          <li><cite>D. Eisenbud and J. Harris, <em>The Geometry of Schemes</em></cite><span>Graduate Texts in Mathematics 197, Springer, 2000. Detailed, illustrative, and rich in examples.</span></li>
+          <li><cite>U. Görtz and T. Wedhorn, <em>Algebraic Geometry I: Schemes</em></cite><span>Vieweg+Teubner, 2010. A comprehensive introduction with many examples and substantial motivation.</span></li>
+          <li><cite>U. Görtz and T. Wedhorn, <em>Algebraic Geometry II: Cohomology of Schemes</em></cite><span>Springer Spektrum, 2023. A comprehensive continuation devoted to cohomological methods.</span></li>
+          <li><cite>R. Hartshorne, <em>Algebraic Geometry</em></cite><span>Graduate Texts in Mathematics 52, Springer, 1977. The classical standard reference.</span></li>
+          <li><cite>Q. Liu, <em>Algebraic Geometry and Arithmetic Curves</em></cite><span>Oxford University Press, 2002. Particularly useful for the arithmetic side of the subject.</span></li>
+        </ul>
+      </div>
+
+      <div class="reading-group">
+        <h3>More on commutative algebra</h3>
+        <ul class="reading-list">
+          <li><cite>M. F. Atiyah and I. G. Macdonald, <em>Introduction to Commutative Algebra</em></cite><span>Addison–Wesley, 1969. The standard concise introduction, with a clear exposition.</span></li>
+          <li><cite>D. Eisenbud, <em>Commutative Algebra with a View Toward Algebraic Geometry</em></cite><span>Graduate Texts in Mathematics 150, Springer, 1995. An extensive reference for the commutative algebra used in geometry.</span></li>
+        </ul>
+      </div>
+
+      <div class="reading-group">
+        <h3>Category theory</h3>
+        <ul class="reading-list">
+          <li><cite>M. Brandenburg, <em>Einführung in die Kategorientheorie</em></cite><span>Springer Spektrum, 2nd ed., 2017. A careful German-language introduction with many examples.</span></li>
+          <li><cite>S. Mac Lane, <em>Categories for the Working Mathematician</em></cite><span>Graduate Texts in Mathematics 5, Springer, 2nd ed., 1998. The standard general reference.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <a class="back-link" href="teaching.html">← Back to teaching</a>
+</main>
+
+<footer><div><small>Thomas Nikolaus · <a href="contact.html">Contact</a> · <a href="Files/Thomas_Nikolaus_CV.pdf">CV</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></small></div></footer>
+</body>
+</html>
