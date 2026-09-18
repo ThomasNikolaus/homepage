@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="212" height="64" viewBox="0 0 212 64" role="img" aria-label="AI.MATH">
+  <rect width="212" height="64" rx="10" fill="#faf6f8"/>
+  <path d="M5 48 18 15h8l13 33h-9l-2.5-7h-12L13 48Zm13-14h7L21.5 24Z" fill="#172033" fill-rule="evenodd"/>
+  <path d="M42 15h8v33h-8z" fill="#172033"/>
+  <circle cx="57" cy="45" r="4" fill="#920055"/>
+  <text x="67" y="48" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700" fill="#172033">MATH</text>
+</svg>
