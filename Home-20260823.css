@@ -431,15 +431,12 @@ main { overflow: hidden; }
 }
 .outreach-card strong .ai-math-dot {
   display: inline-block;
-  width: .27em;
-  height: .27em;
-  margin: 0 .06em .04em;
-  overflow: hidden;
+  width: .18em;
+  height: .18em;
+  margin: 0 .05em;
+  vertical-align: baseline;
   border-radius: 50%;
   background: #920055;
-  color: transparent;
-  font-size: 1em;
-  line-height: 1;
 }
 .outreach-card > span:not(.outreach-date) {
   color: #334054;
