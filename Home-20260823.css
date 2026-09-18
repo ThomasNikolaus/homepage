@@ -429,7 +429,7 @@ main { overflow: hidden; }
   margin-bottom: 12px;
   font: 500 1.25rem/1.3 Georgia, 'Times New Roman', serif;
 }
-.ai-math-dot { color: #920055; }
+.outreach-card strong .ai-math-dot { color: #920055; }
 .outreach-card > span:not(.outreach-date) {
   color: #334054;
   font-size: .94rem;
