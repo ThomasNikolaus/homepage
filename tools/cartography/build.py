@@ -132,7 +132,7 @@ def metadata(chart, record):
 
 def catalogue(charts):
     if not charts:
-        return '<p class="catalogue-empty">Exploration Charts will be posted here as the thematic blocks are completed.</p>'
+        return '<p class="catalogue-empty">Exploration Charts will be published here as they become available.</p>'
     entries = []
     for chart in charts:
         record = chart["versions"][0]

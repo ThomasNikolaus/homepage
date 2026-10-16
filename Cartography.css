@@ -39,30 +39,23 @@ a:focus-visible, summary:focus-visible {
 .cartography p { margin: 0 0 17px; }
 .cartography .cartography-subtitle { margin: 0; }
 .cartography-introduction p:last-child,
-.cartography-process p:last-child { margin-bottom: 0; }
+.chart-overview p:last-child { margin-bottom: 0; }
 .cartography figure { margin: 0; }
 .cartography figure img { display: block; width: 100%; height: auto; }
 .atlas-figure { max-width: 410px; }
-.cartography-contents {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 27px;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 14px 0;
-  font-size: .9rem;
-}
-.cartography-contents a { text-decoration: none; color: var(--navy); }
-.cartography-contents a:hover { text-decoration: underline; }
 .cartography-section { padding-top: 36px; scroll-margin-top: 20px; }
 .cartography-section h2 {
   margin: 0 0 22px;
   font: 500 clamp(1.8rem, 3vw, 2.3rem)/1.15 Georgia, 'Times New Roman', serif;
   letter-spacing: -.015em;
 }
-.chart-catalogue { padding-bottom: 30px; border-bottom: 1px solid var(--line); }
+.chart-catalogue {
+  padding-bottom: 30px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
 .cartography .catalogue-empty { margin: 0; color: var(--muted); }
-.cartography-process {
+.chart-overview {
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(260px, 1fr);
   gap: 48px;
@@ -70,7 +63,15 @@ a:focus-visible, summary:focus-visible {
   margin-bottom: 30px;
 }
 .chart-figure { max-width: 380px; justify-self: center; }
-.aspects-introduction { font-weight: 600; }
+.chart-contents { max-width: none; padding: 0; }
+.chart-contents summary { padding: 16px 0; font-size: 1rem; color: var(--navy); }
+.chart-contents[open] summary { margin-bottom: 6px; }
+.cartography .collaboration-note {
+  margin: 24px 0 0;
+  font-size: .92rem;
+  color: var(--muted);
+  max-width: 950px;
+}
 .chart-aspects {
   max-width: none;
   list-style: none;
@@ -137,16 +138,16 @@ a:focus-visible, summary:focus-visible {
 }
 
 @media (max-width: 800px) {
-  .cartography-introduction, .cartography-process { gap: 28px; }
+  .cartography-introduction, .chart-overview { gap: 28px; }
   .cartography-introduction { grid-template-columns: minmax(0, 1.3fr) minmax(220px, 1fr); }
-  .cartography-process { grid-template-columns: minmax(0, 1.3fr) minmax(220px, 1fr); }
+  .chart-overview { grid-template-columns: minmax(0, 1.3fr) minmax(220px, 1fr); }
 }
 @media (max-width: 700px) {
   .site-header { flex-wrap: wrap; align-items: center; }
   .site-header nav { flex-wrap: wrap; overflow: visible; gap: 10px 15px; }
   .cartography-heading { padding: 38px 0 26px; }
   .cartography-subtitle { font-size: 1.05rem; }
-  .cartography-introduction, .cartography-process { grid-template-columns: 1fr; gap: 26px; }
+  .cartography-introduction, .chart-overview { grid-template-columns: 1fr; gap: 26px; }
   .atlas-figure, .chart-figure { width: min(100%, 360px); justify-self: center; }
   .cartography-introduction { padding-bottom: 30px; }
   .cartography-section { padding-top: 30px; }
