@@ -17,6 +17,30 @@ a:focus-visible, summary:focus-visible {
 .cartography-heading {
   padding: 52px 0 30px;
 }
+.cartography-affiliation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 20px;
+}
+.cartography-affiliation .mm-symbol {
+  display: block;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  object-fit: contain;
+}
+.cartography .cartography-affiliation p {
+  margin: 0;
+  font-size: .875rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.cartography-affiliation span {
+  color: var(--navy);
+  font-weight: 600;
+  white-space: nowrap;
+}
 .cartography-heading h1 {
   font: 500 clamp(2.4rem, 4.5vw, 3.6rem)/1.08 Georgia, 'Times New Roman', serif;
   letter-spacing: -.025em;
@@ -146,6 +170,7 @@ a:focus-visible, summary:focus-visible {
   .site-header { flex-wrap: wrap; align-items: center; }
   .site-header nav { flex-wrap: wrap; overflow: visible; gap: 10px 15px; }
   .cartography-heading { padding: 38px 0 26px; }
+  .cartography-affiliation .mm-symbol { width: 40px; height: 40px; flex-basis: 40px; }
   .cartography-subtitle { font-size: 1.05rem; }
   .cartography-introduction, .chart-overview { grid-template-columns: 1fr; gap: 26px; }
   .atlas-figure, .chart-figure { width: min(100%, 360px); justify-self: center; }
