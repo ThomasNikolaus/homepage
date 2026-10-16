@@ -87,7 +87,7 @@ def load_charts(site_root):
                 raise ValueError(f"{context}: duplicate version")
             seen_versions.add(version)
             record = {"version": version}
-            for field in ("title", "date", "abstract", "pdf"):
+            for field in ("title", "date", "abstract", "pdf", "status", "human_review"):
                 record[field] = required_text(raw_version, field, context)
             if not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", record["date"]):
                 raise ValueError(f"{context}: date must use YYYY-MM-DD")
@@ -127,12 +127,24 @@ def links(record):
 def metadata(chart, record):
     return (f'<p class="chart-meta">{escape("; ".join(record["authors"]))}<br>'
             f'{escape(chart["id"])} · {escape(record["version"])} · '
-            f'<time datetime="{escape(record["date"])}">{escape(record["date"])}</time></p>')
+            f'<time datetime="{escape(record["date"])}">{escape(record["date"])}</time><br>'
+            f'<strong>Status:</strong> {escape(record["status"])}</p>')
 
 
 def catalogue(charts):
     if not charts:
-        return '<p class="catalogue-empty">Exploration Charts will be published here as they become available.</p>'
+        placeholders = (
+            ("Group completion commutes with infinite products", "group-completion-commutes-with-infinite-products.pdf"),
+            ("There is no infinite Künneth", "there-is-no-infinite-kunneth.pdf"),
+        )
+        entries = []
+        for title, filename in placeholders:
+            href = "/homotopical-cartography/placeholders/" + filename
+            entries.append('<article class="chart-record chart-placeholder-record">\n'
+                           f'<h3><a href="{escape(href)}">{escape(title)}</a></h3>\n'
+                           f'<p class="chart-links"><a href="{escape(href)}">PDF</a> · Placeholder</p>\n'
+                           '</article>')
+        return "\n".join(entries)
     entries = []
     for chart in charts:
         record = chart["versions"][0]
@@ -147,7 +159,9 @@ def catalogue(charts):
 def landing_page(chart, record, current):
     title = escape(record["title"])
     body = (f'<h1>{title}</h1>\n' + metadata(chart, record) + '\n'
-            + f'<p class="chart-abstract">{escape(record["abstract"])}</p>\n' + links(record))
+            + f'<p class="chart-abstract">{escape(record["abstract"])}</p>\n' + links(record)
+            + '\n<h2>Human verification and understanding</h2>\n'
+            + f'<p class="chart-human-review">{escape(record["human_review"])}</p>')
     if current:
         if chart["concept_doi"]:
             doi = chart["concept_doi"]

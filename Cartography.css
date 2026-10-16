@@ -53,6 +53,7 @@ a:focus-visible, summary:focus-visible {
   color: var(--muted);
   margin: 0;
 }
+.cartography-explanation { padding-bottom: 30px; }
 .cartography-introduction {
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(260px, 1fr);
